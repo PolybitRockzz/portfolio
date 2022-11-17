@@ -1,0 +1,7 @@
+Here I keep my color pallete to use in the project.
+
+03045E
+0077B6
+00B4D8
+90E0EF
+CAF0F8
