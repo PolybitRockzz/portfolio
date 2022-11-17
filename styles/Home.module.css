@@ -56,6 +56,35 @@
   font-size: 1.5rem;
 }
 
+.description a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.description a:hover,
+.description a:focus,
+.description a:active {
+  text-decoration: underline;
+}
+
+.subtle {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1rem;
+  color: rgb(44, 44, 44);
+}
+
+.subtle a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.subtle a:hover,
+.subtle a:focus,
+.subtle a:active {
+  text-decoration: underline;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;
