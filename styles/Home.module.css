@@ -71,19 +71,8 @@
 .subtle {
   margin: 4rem 0;
   line-height: 1.5;
-  font-size: 1rem;
-  color: rgb(44, 44, 44);
-}
-
-.subtle a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.subtle a:hover,
-.subtle a:focus,
-.subtle a:active {
-  text-decoration: underline;
+  font-size: 18px;
+  color: rgb(70, 70, 70);
 }
 
 .code {

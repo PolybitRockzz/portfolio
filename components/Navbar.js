@@ -1,4 +1,5 @@
 import styles from '../styles/Navbar.module.css'
+import Link from 'next/link'
 
 const Navbar = () => {
     return (
@@ -7,12 +8,12 @@ const Navbar = () => {
                 <a href="/"><h1>Swastik Biswas</h1></a>
             </div>
             <nav>
-                <li><a href='/'>Home</a></li>
-                <li><a href='/projects'>Projects</a></li>
-                <li><a href='/timeline'>Timeline</a></li>
-                <li><a href='/contact'>Contact</a></li>
+                <li><Link href='/'>Home</Link></li>
+                <li><Link href='/projects'>Projects</Link></li>
+                <li><Link href='/timeline'>Timeline</Link></li>
+                <li><Link href='/contact'>Contact</Link></li>
             </nav>
-            <a className={styles.cv} href="#"><button>Download CV</button></a>
+            <a className={styles.cv} href="#" target={'_blank'}><button>Download CV</button></a>
         </header>
     )
 }
