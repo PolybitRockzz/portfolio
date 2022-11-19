@@ -3,12 +3,12 @@
     top: 0;
     left: 0;
     width: 100%;
+    max-height: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 5%;
     background-color: #141414;
-    transition: all 0.3s ease-in-out 0s;
 }
 
 .navbar:hover {
@@ -27,11 +27,6 @@
 .logo a {
     cursor: pointer;
     font-size: 12px;
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.logo a {
-    transition: all 0.3s ease-in-out 0s;
     text-decoration: none;
 }
 
@@ -46,16 +41,15 @@
 .navbar nav li {
     display: inline-block;
     padding: 0px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    border-radius: 2.5px;
+    margin: 0 10px;
 }
 
-.navbar li a {
-    transition: all 0.3s ease-in-out 0s;
-}
-
-.navbar li a:hover {
-    color: #00B4D8;
+.navbar li:hover {
     cursor: pointer;
-    text-decoration: solid underline #00B4D8;
+    background-color: #00B4D8;
 }
 
 .cv button {
@@ -65,7 +59,6 @@
     font-weight: 500;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out 0s;
 }
 
 .cv button:hover {

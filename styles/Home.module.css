@@ -1,10 +1,10 @@
 .container {
-  padding: 0 1rem;
-  margin-top: 50px;
+  margin-top: 15vh;
+  padding: 0 5%;
 }
 
 .main {
-  min-height: 100vh;
+  min-height: 75vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -135,13 +135,16 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
