@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Home | Swastik Biswas</title>
         <meta name="description" content="swastik polybit biswas, portfolio, projects, contact" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="../public/favicon.ico" />
       </Head>
       
       <div className={styles.banner}>
