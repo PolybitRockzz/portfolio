@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Typewriter } from 'react-simple-typewriter'
 import styles from '../styles/Home.module.css'
 import polybit from '../public/polybit.png'
@@ -10,7 +11,8 @@ export default function Home() {
       <Head>
         <title>Home | Swastik Biswas</title>
         <meta name="description" content="swastik polybit biswas, portfolio, projects, contact" />
-        <link rel="shortcut icon" href="../public/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </Head>
       
       <div className={styles.banner}>
@@ -54,6 +56,34 @@ export default function Home() {
       </div>
 
       <div className={styles.svg + " " + styles.exit}></div>
+
+      <div className={styles.skills}>
+        <h1 className={styles.title}>Skills</h1>
+        <div className={styles.skillsExt}>
+          <h3>Well Experienced In</h3>
+          <div className={styles.skillset}>
+            <i className={"devicon-java-plain " + styles.skill}></i>
+            <i className={"devicon-python-plain " + styles.skill}></i>
+            <i className={"devicon-nextjs-plain " + styles.skill}></i>
+            <i className={"devicon-unity-original " + styles.skill}></i>
+            <i className={"devicon-firebase-plain " + styles.skill}></i>
+          </div>
+        </div>
+        <div className={styles.skillsExt}>
+          <h3>Currently Learning</h3>
+          <div className={styles.skillset}>
+            <i className={"devicon-androidstudio-plain " + styles.skill}></i>
+            <i className={"devicon-arduino-plain " + styles.skill}></i>
+            <i className={"devicon-csharp-plain " + styles.skill}></i>
+            <i className={"devicon-tailwindcss-plain " + styles.skill}></i>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.more}>
+        <Link href='/projects'><button className={styles.button}>View Projects</button></Link>
+        <Link href='/timeline'><button className={styles.button}>View My Timeline</button></Link>
+      </div>
 
     </div>
   )
