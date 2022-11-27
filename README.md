@@ -1,10 +1,11 @@
 # My Personal Portfolio
 
-This is my personal portfolio website, where I showcase my projects, skills & services.
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-# Made Using Next.js
+This is my personal portfolio website, where I showcase my projects, skills & services. This is built using Next.js.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is deployed on Vercel. Visit [here](https://swastikbiswas.vercel.app/) or [here](https://swastik.rocks/).
 
 ## Getting Started
 

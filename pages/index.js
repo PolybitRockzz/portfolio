@@ -6,6 +6,20 @@ import styles from '../styles/Home.module.css'
 import polybit from '../public/polybit.png'
 
 export default function Home() {
+  const skillsExpertise = [
+    { name: 'Java', icon: 'devicon-java-plain' },
+    { name: 'Python', icon: 'devicon-python-plain' },
+    { name: 'NextJS', icon: 'devicon-nextjs-plain' },
+    { name: 'Unity', icon: 'devicon-unity-original' },
+    { name: 'Firebase', icon: 'devicon-firebase-plain' },
+  ]
+  const skillsLearning = [
+    { name: 'Android', icon: 'devicon-androidstudio-plain' },
+    { name: 'Arduino', icon: 'devicon-arduino-plain' },
+    { name: 'C#', icon: 'devicon-csharp-plain' },
+    { name: 'Tailwind', icon: 'devicon-tailwindcss-plain' },
+  ]
+
   return (
     <div className={styles.container}>
       <Head>
@@ -32,7 +46,7 @@ export default function Home() {
             typeSpeed={75}
             deleteSpeed={50}
             delaySpeed={1000}
-            words={["A Student.", "A Developer.", "An Entrepreneur."]}
+            words={["A School Student.", "A Prodigy Developer.", "An Entrepreneur."]}
           />
         </div>
 
@@ -62,20 +76,23 @@ export default function Home() {
         <div className={styles.skillsExt}>
           <h3>Well Experienced In</h3>
           <div className={styles.skillset}>
-            <i className={"devicon-java-plain " + styles.skill}></i>
-            <i className={"devicon-python-plain " + styles.skill}></i>
-            <i className={"devicon-nextjs-plain " + styles.skill}></i>
-            <i className={"devicon-unity-original " + styles.skill}></i>
-            <i className={"devicon-firebase-plain " + styles.skill}></i>
+            {skillsExpertise.map((skill) => (
+              <div className={styles.skill}>
+                <i className={skill.icon}></i>
+                <p>{skill.name}</p>
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.skillsExt}>
           <h3>Currently Learning</h3>
           <div className={styles.skillset}>
-            <i className={"devicon-androidstudio-plain " + styles.skill}></i>
-            <i className={"devicon-arduino-plain " + styles.skill}></i>
-            <i className={"devicon-csharp-plain " + styles.skill}></i>
-            <i className={"devicon-tailwindcss-plain " + styles.skill}></i>
+            {skillsLearning.map((skill) => (
+              <div className={styles.skill}>
+                <i className={skill.icon}></i>
+                <p>{skill.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

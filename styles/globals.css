@@ -5,6 +5,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+  color: #edf0f1;
+  background: #141414;
+}
+
+::selection {
+  background: #edf0f1;
+  color: #141414;
 }
 
 a {
@@ -15,14 +22,4 @@ a {
 * {
   box-sizing: border-box;
   transition: all 0.35s ease-in-out 0s;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: #edf0f1;
-    background: #141414;
-  }
 }
