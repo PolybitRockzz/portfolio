@@ -1,9 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+
 import { Typewriter } from 'react-simple-typewriter'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+
 import styles from '../styles/Home.module.css'
 import polybit from '../public/polybit.png'
 import { useEffect } from 'react'
@@ -35,6 +40,8 @@ export default function Home() {
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
       </Head>
+
+      <Navbar />
       
       <div className={styles.banner}>
 
@@ -118,6 +125,8 @@ export default function Home() {
       </div>
 
       <div className={styles.svg + " " + styles.entry}></div>
+
+      <Footer />
 
     </div>
   )

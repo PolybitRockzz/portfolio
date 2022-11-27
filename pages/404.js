@@ -1,4 +1,8 @@
 import Head from 'next/head'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 import styles from '../styles/Home.module.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
@@ -7,6 +11,7 @@ export default function NotFound() {
     const router = useRouter()
 
     useEffect(() =>  {
+        Aos.init({ duration: 500 })
         setTimeout(() => {
             router.push('/')
         }, 3000)
@@ -20,7 +25,8 @@ export default function NotFound() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className={styles.main}>
+        <div data-aos={'fade-up'} className={styles.main}>
+
             <h1 className={styles.title}>
                 Oops! Such empty!
             </h1>
@@ -31,7 +37,9 @@ export default function NotFound() {
             <p className={styles.subtle}>
                 You'll be redirected to the homepage in 3 seconds
             </p>
-        </main>
+
+        </div>
+
     </div>
   )
 }
