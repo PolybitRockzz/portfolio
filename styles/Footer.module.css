@@ -14,7 +14,34 @@
     background-color: #141414;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.socials i {
+    font-size: 2vw;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
 .footer p {
     font-size: 1.25vw;
     font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        min-height: 20vh;
+    }
+
+    .socials i {
+        font-size: 4vw;
+    }
+
+    .footer p {
+        font-size: 2vw;
+    }
 }

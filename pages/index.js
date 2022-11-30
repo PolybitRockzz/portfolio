@@ -14,120 +14,120 @@ import polybit from '../public/polybit.png'
 import { useEffect } from 'react'
 
 export default function Home() {
-  useEffect(() => {
-    Aos.init({ duration: 500 })
-  })
+	useEffect(() => {
+		Aos.init({ duration: 500 })
+	})
 
-  const skillsExpertise = [
-    { key: "1", name: 'Java', icon: 'devicon-java-plain' },
-    { key: "2", name: 'Python', icon: 'devicon-python-plain' },
-    { key: "3", name: 'NextJS', icon: 'devicon-nextjs-plain' },
-    { key: "4", name: 'Unity', icon: 'devicon-unity-original' },
-    { key: "5", name: 'Firebase', icon: 'devicon-firebase-plain' },
-  ]
-  const skillsLearning = [
-    { key: "6", name: 'Android', icon: 'devicon-androidstudio-plain' },
-    { key: "7", name: 'Arduino', icon: 'devicon-arduino-plain' },
-    { key: "8", name: 'C#', icon: 'devicon-csharp-plain' },
-    { key: "9", name: 'Tailwind', icon: 'devicon-tailwindcss-plain' },
-  ]
+	const skillsExpertise = [
+		{ key: "1", name: 'Java', icon: 'devicon-java-plain' },
+		{ key: "2", name: 'Python', icon: 'devicon-python-plain' },
+		{ key: "3", name: 'NextJS', icon: 'devicon-nextjs-plain' },
+		{ key: "4", name: 'Unity', icon: 'devicon-unity-original' },
+		{ key: "5", name: 'Firebase', icon: 'devicon-firebase-plain' },
+	]
+	const skillsLearning = [
+		{ key: "6", name: 'Android', icon: 'devicon-androidstudio-plain' },
+		{ key: "7", name: 'Arduino', icon: 'devicon-arduino-plain' },
+		{ key: "8", name: 'C#', icon: 'devicon-csharp-plain' },
+		{ key: "9", name: 'Tailwind', icon: 'devicon-tailwindcss-plain' },
+	]
 
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Home | Swastik Biswas</title>
-        <meta name="description" content="swastik polybit biswas, portfolio, projects, contact" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-      </Head>
+	return (
+		<div className={styles.container}>
+			<Head>
+				<title>Home | Swastik Biswas</title>
+				<meta name="description" content="Hello World! I'm Swastik Biswas." />
+				<link rel="shortcut icon" href="/favicon.ico" />
+				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+			</Head>
 
-      <Navbar />
-      
-      <div className={styles.banner}>
+			<Navbar />
 
-        <Image data-aos={'fade-down'} src={polybit} className={styles.bannerImage} />
+			<div className={styles.banner}>
 
-        <h1 data-aos={'fade-up'} className={styles.title}>
-          Hello World!<br/>
-          I'm Swastik Biswas.
-        </h1>
+				<Image data-aos={'fade-down'} src={polybit} className={styles.bannerImage} />
 
-        <div data-aos={'fade-up'} className={styles.typewriter}>
-          <Typewriter
-            loop
-            cursor
-            cursorStyle='█'
-            typeSpeed={75}
-            deleteSpeed={50}
-            delaySpeed={1000}
-            words={["A School Student.", "A Prodigy Developer.", "An Entrepreneur."]}
-          />
-        </div>
+				<h1 data-aos={'fade-up'} className={styles.title}>
+					Hello World!<br />
+					I'm Swastik Biswas.
+				</h1>
 
-      </div>
+				<div data-aos={'fade-up'} className={styles.typewriter}>
+					<Typewriter
+						loop
+						cursor
+						cursorStyle='█'
+						typeSpeed={75}
+						deleteSpeed={50}
+						delaySpeed={1000}
+						words={["A School Student.", "A Prodigy Developer.", "An Entrepreneur."]}
+					/>
+				</div>
 
-      <div className={styles.svg + " " + styles.entry}></div>
+			</div>
 
-      <div className={styles.aboutMe}>
+			<div className={styles.svg + " " + styles.entry}></div>
 
-        <h1 data-aos={'fade-up'} className={styles.title}>About Me</h1>
+			<div className={styles.aboutMe}>
 
-        <p data-aos={'fade-up'} className={styles.description}>
-          Hello, world! I'm a 16-year-old computer and blockchain enthusiast.
-          I'm a mostly self-taught developer for native desktop and web applications.
-          I have keen enthusiasm in learning full-stack development, blockchain technology and cryptography.
-          I am also the chief executive of a small association called The Junior Coders.
-          My main motivation is to build my own presence in the digital world, one step at a time.
-          I aspire to become an aerospace engineer in the future. 🚀
-        </p>
+				<h1 data-aos={'fade-up'} className={styles.title}>About Me</h1>
 
-      </div>
+				<p data-aos={'fade-up'} className={styles.description}>
+					Hello, world! I'm a 16-year-old computer and blockchain enthusiast.
+					I'm a mostly self-taught developer for native desktop and web applications.
+					I have keen enthusiasm in learning full-stack development, blockchain technology and cryptography.
+					I am also the chief executive of a small association called The Junior Coders.
+					My main motivation is to build my own presence in the digital world, one step at a time.
+					I aspire to become an aerospace engineer in the future. 🚀
+				</p>
 
-      <div className={styles.svg + " " + styles.exit}></div>
+			</div>
 
-      <div className={styles.skills}>
+			<div className={styles.svg + " " + styles.exit}></div>
 
-        <h1 data-aos={'fade-up'} className={styles.title}>Skills</h1>
+			<div className={styles.skills}>
 
-        <div data-aos={'fade-up'} className={styles.skillsExt}>
+				<h1 data-aos={'fade-up'} className={styles.title}>Skills</h1>
 
-          <h3>Well Experienced In</h3>
-          <div className={styles.skillset}>
-            {skillsExpertise.map((skill) => (
-              <div key={skill.key} className={styles.skill}>
-                <i className={skill.icon}></i>
-                <p>{skill.name}</p>
-              </div>
-            ))}
-          </div>
+				<div data-aos={'fade-up'} className={styles.skillsExt}>
 
-        </div>
+					<h3>Well Experienced In</h3>
+					<div className={styles.skillset}>
+						{skillsExpertise.map((skill) => (
+							<div key={skill.key} className={styles.skill}>
+								<i className={skill.icon}></i>
+								<p>{skill.name}</p>
+							</div>
+						))}
+					</div>
 
-        <div data-aos={'fade-up'} className={styles.skillsExt}>
+				</div>
 
-          <h3>Currently Learning</h3>
-          <div className={styles.skillset}>
-            {skillsLearning.map((skill) => (
-              <div key={skill.key} className={styles.skill}>
-                <i className={skill.icon}></i>
-                <p>{skill.name}</p>
-              </div>
-            ))}
-          </div>
+				<div data-aos={'fade-up'} className={styles.skillsExt}>
 
-        </div>
+					<h3>Currently Learning</h3>
+					<div className={styles.skillset}>
+						{skillsLearning.map((skill) => (
+							<div key={skill.key} className={styles.skill}>
+								<i className={skill.icon}></i>
+								<p>{skill.name}</p>
+							</div>
+						))}
+					</div>
 
-      </div>
+				</div>
 
-      <div data-aos={'fade-up'} className={styles.more}>
-        <Link href='/projects'><button className={styles.button}>View Projects</button></Link>
-        <Link href='/timeline'><button className={styles.button}>View My Timeline</button></Link>
-      </div>
+			</div>
 
-      <div className={styles.svg + " " + styles.entry}></div>
+			<div data-aos={'fade-up'} className={styles.more}>
+				<Link href='/projects'><button className={styles.button}>View Projects</button></Link>
+				<Link href='/timeline'><button className={styles.button}>View My Timeline</button></Link>
+			</div>
 
-      <Footer />
+			<div className={styles.svg + " " + styles.entry}></div>
 
-    </div>
-  )
+			<Footer />
+
+		</div>
+	)
 }

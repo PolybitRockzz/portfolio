@@ -1,0 +1,179 @@
+.container {
+	margin: 0;
+	margin-top: 10vh;
+	padding: 0;
+}
+
+.banner {
+	min-height: 65vh;
+	max-height: 65vh;
+	margin: 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner h3 {
+    margin: 0;
+    margin-top: 3vh;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+    font-weight: 400;
+    line-height: 1.75rem;
+}
+
+.title a {
+	color: #0070f3;
+	text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+	text-decoration: underline;
+}
+
+.title {
+	margin: 0;
+	line-height: 1.15;
+	font-size: 5vw;
+}
+
+.title,
+.description {
+	text-align: center;
+}
+
+.description {
+	margin: 4rem 0;
+	line-height: 1.5;
+	font-size: 18px;
+	width: 65vw;
+}
+
+.description a {
+	color: #0070f3;
+	text-decoration: none;
+}
+
+.description a:hover,
+.description a:focus,
+.description a:active {
+	text-decoration: underline;
+}
+
+.svg {
+	aspect-ratio: 960/150;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.entry {
+	background-image: url("../public/entry.svg");
+}
+
+.exit {
+	background-image: url("../public/exit.svg");
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10vh 0;
+    width: 100%;
+}
+
+.project img {
+    display: block;
+    max-width: 35vw;
+    width: auto;
+    height: auto;
+    margin: 0 5vw;
+    padding: 0;
+    border-radius: 25px;
+}
+
+.project_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5vw;
+    padding: 0;
+    width: 35vw;
+    text-align: center;
+}
+
+.project_info h1 {
+    margin: 0;
+    margin-bottom: 2vh;
+    font-size: 4vw;
+    font-weight: 600;
+    line-height: 1.75rem;
+}
+
+.project_info p {
+    margin: 0;
+    margin-bottom: 3vh;
+    font-size: 1.25vw;
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+
+.version {
+    margin: 0;
+    margin-bottom: 5vh;
+    font-size: 1.25vw;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.left {
+    background-color: #717983;
+    color: #141414;
+}
+
+.left ::selection {
+    background-color: #141414;
+    color: #717983;
+}
+
+.right {
+    background-color: #141414;
+    color: #edf0f1;
+    margin: 0 3vw;
+}
+
+.button {
+	font-weight: 300;
+	font-size: 1.25vw;
+	margin: 0 15px;
+	color: #edf0f1;
+	text-decoration: none;
+	padding: 9px 25px;
+	background-color: #00B4D8;
+	border: none;
+	font-weight: 600;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #0077B6;
+}
