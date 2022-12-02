@@ -75,6 +75,7 @@ export default function Projects({ repos, projects }) {
                 <div className={styles.svg + " " + styles.exit}></div>
 
                 <div className={styles.project + " " + styles.right}>
+                    <Image data-aos={'fade-left'} src={jarvis_desktop_code_screenshot} alt="Jarvis Desktop Code Screenshot" />
                     <div data-aos={'fade-right'} className={styles.project_info}>
                         <h1>JARVIS Desktop</h1>
                         <p>Python, Tensorflow</p>
@@ -88,7 +89,6 @@ export default function Projects({ repos, projects }) {
                         </h4>
                         <Link href='https://github.com/PolybitRockzz/jarvis-desktop'><button className={styles.button}>View on GitHub</button></Link>
                     </div>
-                    <Image data-aos={'fade-left'} src={jarvis_desktop_code_screenshot} alt="Jarvis Desktop Code Screenshot" />
                 </div>
             </div>
 

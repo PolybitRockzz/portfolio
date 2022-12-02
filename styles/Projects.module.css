@@ -158,6 +158,7 @@
     background-color: #141414;
     color: #edf0f1;
     margin: 0 3vw;
+    flex-direction: row-reverse;
 }
 
 .button {
@@ -176,4 +177,48 @@
 
 .button:hover {
 	background-color: #0077B6;
+}
+
+@media (max-width: 800px) {
+    .banner h3 {
+        font-size: 3vw;
+    }
+
+    .title {
+        font-size: 10vw;
+    }
+
+    .description {
+        width: 80vw;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project img {
+        max-width: 80vw;
+        margin: 0;
+        margin-bottom: 5vh;
+    }
+
+    .project_info {
+        width: 80vw;
+    }
+
+    .project_info h1 {
+        font-size: 8vw;
+    }
+
+    .project_info p {
+        font-size: 3vw;
+    }
+
+    .version {
+        font-size: 3vw;
+    }
+
+    .button {
+        font-size: 3vw;
+    }
 }

@@ -7,7 +7,7 @@ const Footer = () => {
             <div className={styles.socials}>
                 <Link href={'https://github.com/PolybitRockzz/'}><i className="devicon-github-original"></i></Link>
                 <Link href={'https://twitter.com/PolybitRockzz'}><i className="devicon-twitter-original"></i></Link>
-                <Link href={'https://www.reddit.com/user/PolybitRockzz'}><i className="devicon-linkedin-plain"></i></Link>
+                <Link href={'https://linkedin.com/in/swastik-polybit-biswas'}><i className="devicon-linkedin-plain"></i></Link>
             </div>
             <p>© 2022 Swastik Biswas</p>
         </footer>

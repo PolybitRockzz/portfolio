@@ -49,7 +49,6 @@
 }
 
 .navbar li:hover {
-    cursor: pointer;
     background-color: #00B4D8;
 }
 
