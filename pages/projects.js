@@ -33,8 +33,10 @@ export default function Projects({ repos, projects }) {
 			<Head>
 				<title>Projects | Swastik Biswas</title>
 				<meta name="description" content="Hello World! I'm Swastik Biswas." />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charset="UTF-8" />
 				<link rel="shortcut icon" href="/favicon.ico" />
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 			</Head>
 
 			<Navbar />
@@ -46,8 +48,8 @@ export default function Projects({ repos, projects }) {
 				</h1>
 
 				<h3 data-aos={'fade-up'}>
-					0{projectData} Standalone Projects<br/>
-					0{githubData} GitHub Repositories
+					{projectData} Standalone Projects<br/>
+					{githubData} GitHub Repositories
 				</h3>
 
 			</div>
@@ -99,7 +101,7 @@ export default function Projects({ repos, projects }) {
 	)
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res1 = await fetch('https://api.github.com/users/PolybitRockzz/repos')
     const res2 = await fetch('https://pastebin.com/raw/fsEtm14Q')
     const data1 = await res1.json()

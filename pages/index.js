@@ -37,8 +37,10 @@ export default function Home() {
 			<Head>
 				<title>Home | Swastik Biswas</title>
 				<meta name="description" content="Hello World! I'm Swastik Biswas." />
+                <meta name="robots" content="index, follow" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta charset="UTF-8" />
 				<link rel="shortcut icon" href="/favicon.ico" />
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
 			</Head>
 
 			<Navbar />
