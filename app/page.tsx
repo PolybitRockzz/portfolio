@@ -3,6 +3,7 @@ import Favicon from '@/public/favicon.ico';
 import Navbar from "@/components/reusable/Navbar";
 import ProfileCard from "@/components/home/ProfileCard";
 import Skills from "@/components/home/Skills";
+import Experience from "@/components/home/Experience";
 
 export const metadata: Metadata = {
   title: "Swastik Biswas",
@@ -22,6 +23,7 @@ export default function Home() {
       <Navbar />
       <ProfileCard />
       <Skills />
+      <Experience />
     </main>
   );
 }

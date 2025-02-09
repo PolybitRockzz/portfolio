@@ -15,7 +15,7 @@ const Navbar = () => {
                         <div className="flex-shrink-0">
                             <Link href="/">
                                 <p className="text-xl font-bold text-neutral-800 dark:text-white cursor-pointer transition-all duration-300 p-2 rounded-md hover:bg-neutral-700">
-                                    Swastik Biswas
+                                    {"<Swastik Biswas />"}
                                 </p>
                             </Link>
                         </div>
