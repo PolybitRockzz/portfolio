@@ -1,5 +1,3 @@
-import { FaCircle } from "react-icons/fa";
-
 const experiences = [
   {
     company: "Octran Technologies",
