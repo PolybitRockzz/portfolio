@@ -66,7 +66,7 @@ const Skills: React.FC = () => {
         // For Dotnet C#, search using C#
         const skillName = skill.name === "Dotnet C#" ? "C#" : skill.name;
         if (skill.category === "Programming") {
-            return `https://github.com/search?q=user:PolybitRockzz+language:${encodeURIComponent(skillName)}`;
+            return `https://github.com/PolybitRockzz?tab=repositories&q=&type=&language=${encodeURIComponent(skillName)}&sort=`;
         }
         return `https://github.com/search?q=user:PolybitRockzz+${encodeURIComponent(skillName)}`;
     };
