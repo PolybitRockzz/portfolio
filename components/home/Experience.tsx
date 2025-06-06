@@ -1,17 +1,17 @@
 const experiences = [
   {
     company: "Octran Technologies",
-    role: "Chief Technology Officer",
+    role: "Co-Founder, Chief Technology Officer",
     date: "March, 2024 - Present",
     description:
       "A startup I co-founded with 2 friends. We are building applications and automations using recent large language models, what will benefit businesses.",
-    link: "https://www.octran.tech/",
+    link: "https://www.octrantech.com/",
   },
   {
-    company: "OpenSource",
+    company: "Open Source",
     role: "Contributor",
     date: "March, 2021 - Present",
-    description: "I actively try to contribute to Open Source on my GitHub.",
+    description: "I actively try to contribute to or initiate various open source projects on my GitHub. I developed several apps, including a Reddit Video Creator, A Java IDE, and a 3D Graphics Engine from scratch.",
     link: "https://github.com/PolybitRockzz",
   },
 ];
