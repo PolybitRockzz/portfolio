@@ -60,17 +60,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* left align items */
-  justify-content: center;
-  height: 100vh;
+  justify-content: center; /* center content vertically */
+  min-height: 100vh;
   text-align: left;
   padding: 6rem 8rem; /* more left padding for left-aligned layout */
+  --addr-row-height: 48px; /* fixed row height for address row to avoid vertical reflow */
 }
 
 .content h1 {
-  font-family: 'Electrolize', monospace;
-  font-size: 4.4rem;
-  font-weight: 400;
-  line-height: 1.05;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.85;
   margin-bottom: 1rem;
   letter-spacing: 0.08em;
   background: linear-gradient(
@@ -83,20 +84,121 @@
   background-clip: text;
 }
 
-.content .university {
-  font-family: 'Electrolize', monospace;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 0.8rem;
-  letter-spacing: 0.05em;
-}
-
-.content .location {
-  font-family: 'Electrolize', monospace;
+.content .subtitle {
+  font-family: 'Space Grotesk', monospace;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.6);
   max-width: 800px;
   line-height: 1.4;
   letter-spacing: 0.03em;
   margin: 0;
+  margin-bottom: 0.2rem;
+}
+
+/* Flags and addresses */
+.flags-block {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.flags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.flag-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 150ms ease, border-color 150ms ease, background-color 150ms ease;
+}
+.flag-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.12);
+}
+.flag-btn.active {
+  background-color: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.addresses {
+  min-width: 320px;
+}
+
+.address {
+  background: rgba(255,255,255,0.02);
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.9);
+  margin-top: 0.6rem;
+}
+
+/* Animations: fade in from left and right */
+.animate-in-left {
+  animation: inFromLeft 360ms ease both;
+}
+.animate-in-right {
+  animation: inFromRight 360ms ease both;
+}
+
+@keyframes inFromLeft {
+  from { opacity: 0; transform: translateX(-18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes inFromRight {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Inline sequence: flag, us box, flag, in box */
+.inline-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  height: var(--addr-row-height); /* lock row height to prevent vertical shifts */
+}
+
+.addr-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+  border-radius: 8px;
+  transition: flex-basis 320ms cubic-bezier(.2,.9,.2,1), padding 320ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease, transform 220ms ease;
+  color: rgba(255,255,255,0.9);
+  height: var(--addr-row-height);
+  box-sizing: border-box;
+  padding: 0 0.6rem; /* horizontal padding only; vertical centered by height */
+}
+
+.addr-text {
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.9);
+  line-height: var(--addr-row-height);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.addr-box.collapsed {
+  flex-basis: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.addr-box.expanded {
+  flex-basis: 420px;
+  padding: 0.3rem 0.6rem;
+  opacity: 1;
 }
