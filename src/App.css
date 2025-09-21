@@ -19,6 +19,8 @@
     radial-gradient(ellipse 800px 600px at bottom right, rgba(0, 100, 50, 0.35) 0%, transparent 100%);
   pointer-events: none;
   z-index: 1;
+  opacity: 0;
+  animation: fadeInGlows 800ms ease 0s forwards;
 }
 
 .grid-background {
@@ -81,12 +83,20 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 1; /* headings animated via .title-block */
 }
 
 .name-row {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
+}
+
+/* Title block: animate SWASTIK + BISWAS (and audio btn) together */
+.title-block {
+  opacity: 0;
+  animation: fadeInHeadings 600ms ease 500ms forwards;
+  display: inline-block;
 }
 
 .audio-btn {
@@ -113,6 +123,8 @@
   margin: 0;
   margin-top: 1.5rem;
   margin-bottom: 0.2rem;
+  opacity: 0;
+  animation: fadeInContent 600ms ease 1250ms forwards;
 }
 
 /* Flags and addresses */
@@ -189,6 +201,8 @@
   gap: 1rem;
   margin-top: 1.2rem;
   height: var(--addr-row-height); /* lock row height to prevent vertical shifts */
+  opacity: 0;
+  animation: fadeInContent 600ms ease 1250ms forwards;
 }
 
 .addr-box {
@@ -207,38 +221,6 @@
 .addr-text {
   font-size: 0.95rem;
   color: rgba(255,255,255,0.6);
-  .audio-btn {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: white;
-    width: 36px;
-    height: 36px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 120ms ease, transform 80ms ease, box-shadow 120ms ease;
-  }
-  .audio-btn.playing {
-    background: rgba(100,200,100,0.12);
-    border-color: rgba(100,200,100,0.28);
-  }
-
-  .audio-btn:hover {
-    background: rgba(255,255,255,0.06);
-  }
-
-  .audio-btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(80,200,140,0.12);
-  }
-
-  .audio-btn:active {
-    transform: translateY(1px);
-  }
   line-height: var(--addr-row-height);
   white-space: nowrap;
   overflow: hidden;
@@ -257,4 +239,20 @@
   flex-basis: 420px;
   padding: 0.3rem 0.6rem;
   opacity: 1;
+}
+
+/* Loading animations - sequential fade-in on page load */
+@keyframes fadeInGlows {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInHeadings {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }

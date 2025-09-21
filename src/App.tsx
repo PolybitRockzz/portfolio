@@ -50,9 +50,10 @@ function App() {
     <div ref={containerRef} className="app-container">
       <div className="grid-background"></div>
       <div className="content">
-        <h1>SWASTIK</h1>
-        <div className="name-row">
-          <h1>BISWAS</h1>
+        <div className="title-block">
+          <h1>SWASTIK</h1>
+          <div className="name-row">
+            <h1>BISWAS</h1>
               <button
                 className={"audio-btn " + (isPlaying ? 'playing' : '')}
                 onClick={() => {
@@ -70,6 +71,7 @@ function App() {
               >
                 {isPlaying ? <FiVolumeX size={18} /> : <FiVolume2 size={18} />}
               </button>
+          </div>
         </div>
         <p className="subtitle">KIIT University, Class of 2028<br/>
                                 B.Tech, Computer Science and Engineering</p>
