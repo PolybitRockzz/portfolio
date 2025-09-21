@@ -39,6 +39,36 @@ function App() {
   )
 }
 
+function USFlag() {
+  return (
+    <svg width="28" height="20" viewBox="0 0 19 12" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <rect width="19" height="14" fill="#b22234"/>
+      <g fill="#fff">
+        <rect y="1" width="19" height="1"/>
+        <rect y="3" width="19" height="1"/>
+        <rect y="5" width="19" height="1"/>
+        <rect y="7" width="19" height="1"/>
+        <rect y="9" width="19" height="1"/>
+        <rect y="11" width="19" height="1"/>
+      </g>
+      <rect x="-1" width="10" height="7" fill="#3c3b6e"/>
+    </svg>
+  )
+}
+
+function INFlag() {
+  return (
+    <svg width="28" height="20" viewBox="0 0 24 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <rect width="24" height="16" fill="#ff9933"/>
+      <rect y="5.33" width="24" height="5.34" fill="#fff"/>
+      <rect y="10.66" width="24" height="5.34" fill="#138808"/>
+      <circle cx="12" cy="8" r="2.5" fill="#000080"/>
+      <circle cx="12" cy="8" r="1.5" fill="#fff"/>
+      <circle cx="12" cy="8" r="1" fill="#000080"/>
+    </svg>
+  )
+}
+
 function FlagsAndAddresses() {
   const [selected, setSelected] = useState<'us' | 'in' | null>('us')
 
@@ -51,7 +81,7 @@ function FlagsAndAddresses() {
         aria-pressed={selected === 'us'}
         title="Show United States address"
       >
-        🇺🇸
+        <USFlag />
       </button>
 
       {/* US Address box - expands when selected */}
@@ -71,7 +101,7 @@ function FlagsAndAddresses() {
         aria-pressed={selected === 'in'}
         title="Show India address"
       >
-        🇮🇳
+        <INFlag />
       </button>
 
       {/* India Address box - expands when selected */}
