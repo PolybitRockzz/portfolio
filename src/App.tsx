@@ -28,9 +28,10 @@ function App() {
     <div ref={containerRef} className="app-container">
       <div className="grid-background"></div>
       <div className="content">
-        <h1>SWASTIK<br/>BISWAS</h1>
-        <p className="subtitle">KIIT University, Class of 2028</p>
-        <p className="subtitle">B.Tech, Computer Science and Engineering</p>
+        <h1>SWASTIK</h1>
+        <h1>BISWAS</h1>
+        <p className="subtitle">KIIT University, Class of 2028<br/>
+                                B.Tech, Computer Science and Engineering</p>
 
         {/* Flags to toggle addresses */}
         <FlagsAndAddresses />
