@@ -28,7 +28,7 @@ function App() {
     <div ref={containerRef} className="app-container">
       <div className="grid-background"></div>
       <div className="content">
-        <h1 dangerouslySetInnerHTML={{ __html: "SWASTIK<br>BISWAS" }}></h1>
+        <h1>SWASTIK BISWAS</h1>
         <p className="university">KIIT University, Class of 2028</p>
         <p className="location">Wilmington, Delaware, United States   |   Kolkata, West Bengal, India</p>
       </div>
