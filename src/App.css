@@ -72,7 +72,7 @@
   font-size: 5rem;
   font-weight: 700;
   line-height: 0.85;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   letter-spacing: 0.08em;
   background: linear-gradient(
     135deg, 
@@ -110,7 +110,7 @@
 
 .flag-btn {
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0);
   color: white;
   font-size: 1.4rem;
   padding: 0.3rem 0.45rem;
@@ -120,11 +120,18 @@
 }
 .flag-btn:hover {
   transform: translateY(-2px);
-  border-color: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.2);
 }
 .flag-btn.active {
-  background-color: rgba(255,255,255,0.04);
-  border-color: rgba(255,255,255,0.18);
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ensure inline SVG flags scale nicely inside button */
+.flag-btn svg {
+  display: block;
+  width: 28px;
+  height: 20px;
 }
 
 .addresses {
@@ -135,7 +142,7 @@
   background: rgba(255,255,255,0.02);
   padding: 0.6rem 0.9rem;
   border-radius: 8px;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.6);
   margin-top: 0.6rem;
 }
 
@@ -171,7 +178,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0);
   border-radius: 8px;
   transition: flex-basis 320ms cubic-bezier(.2,.9,.2,1), padding 320ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease, transform 220ms ease;
   color: rgba(255,255,255,0.9);
@@ -182,7 +189,7 @@
 
 .addr-text {
   font-size: 0.95rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.6);
   line-height: var(--addr-row-height);
   white-space: nowrap;
   overflow: hidden;
