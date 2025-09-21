@@ -1,34 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const rect = container.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      
+      container.style.setProperty('--mouse-x', `${x}px`)
+      container.style.setProperty('--mouse-y', `${y}px`)
+    }
+
+    container.addEventListener('mousemove', handleMouseMove)
+    
+    return () => {
+      container.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [])
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div ref={containerRef} className="app-container">
+      <div className="grid-background"></div>
+      <div className="content">
+        <h1 dangerouslySetInnerHTML={{ __html: "SWASTIK<br>BISWAS" }}></h1>
+        <p className="university">KIIT University, Class of 2028</p>
+        <p className="location">Wilmington, Delaware, United States   |   Kolkata, West Bengal, India</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
