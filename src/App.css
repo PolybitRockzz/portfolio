@@ -83,6 +83,26 @@
   background-clip: text;
 }
 
+.name-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.audio-btn {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: white;
+  padding: 0.3rem 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.audio-btn.playing {
+  background: rgba(100,200,100,0.12);
+  border-color: rgba(100,200,100,0.28);
+}
+
 .content .subtitle {
   font-family: 'Space Grotesk', monospace;
   font-size: 1rem;
@@ -187,6 +207,38 @@
 .addr-text {
   font-size: 0.95rem;
   color: rgba(255,255,255,0.6);
+  .audio-btn {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 120ms ease, transform 80ms ease, box-shadow 120ms ease;
+  }
+  .audio-btn.playing {
+    background: rgba(100,200,100,0.12);
+    border-color: rgba(100,200,100,0.28);
+  }
+
+  .audio-btn:hover {
+    background: rgba(255,255,255,0.06);
+  }
+
+  .audio-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(80,200,140,0.12);
+  }
+
+  .audio-btn:active {
+    transform: translateY(1px);
+  }
   line-height: var(--addr-row-height);
   white-space: nowrap;
   overflow: hidden;

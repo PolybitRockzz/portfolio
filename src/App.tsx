@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
+import { FiVolume2, FiVolumeX } from 'react-icons/fi'
 import './App.css'
 
 function App() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const [isPlaying, setIsPlaying] = useState(false)
 
   useEffect(() => {
     const container = containerRef.current
@@ -24,12 +27,50 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    // create audio element that points to public/pronounciation.mp3
+    const audio = new Audio('/pronounciation.mp3')
+    audio.preload = 'auto'
+    audioRef.current = audio
+
+    const onEnded = () => setIsPlaying(false)
+    const onPause = () => setIsPlaying(false)
+    audio.addEventListener('ended', onEnded)
+    audio.addEventListener('pause', onPause)
+
+    return () => {
+      audio.removeEventListener('ended', onEnded)
+      audio.removeEventListener('pause', onPause)
+      audio.pause()
+      audioRef.current = null
+    }
+  }, [])
+
   return (
     <div ref={containerRef} className="app-container">
       <div className="grid-background"></div>
       <div className="content">
         <h1>SWASTIK</h1>
-        <h1>BISWAS</h1>
+        <div className="name-row">
+          <h1>BISWAS</h1>
+              <button
+                className={"audio-btn " + (isPlaying ? 'playing' : '')}
+                onClick={() => {
+                  if (!audioRef.current) return
+                  if (isPlaying) {
+                    audioRef.current.pause()
+                  } else {
+                    audioRef.current.play()
+                  }
+                  setIsPlaying(!isPlaying)
+                }}
+                aria-pressed={isPlaying}
+                aria-label={isPlaying ? 'Pause pronunciation' : 'Play pronunciation'}
+                title={isPlaying ? 'Pause pronunciation' : 'Play pronunciation'}
+              >
+                {isPlaying ? <FiVolumeX size={18} /> : <FiVolume2 size={18} />}
+              </button>
+        </div>
         <p className="subtitle">KIIT University, Class of 2028<br/>
                                 B.Tech, Computer Science and Engineering</p>
 
