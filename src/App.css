@@ -262,15 +262,17 @@
 /* Navigation Styles */
 .navigation {
   position: fixed;
-  right: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 1rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 2.5rem;
+  height: fit-content;
   z-index: 100;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   opacity: 0;
-  animation: fadeInContent 600ms ease 1250ms forwards;
+  animation: fadeInFromRight 600ms ease 1750ms forwards;
 }
 
 .nav-item-container {
@@ -281,8 +283,8 @@
 }
 
 .nav-btn {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -315,21 +317,26 @@
 
 .nav-label {
   position: absolute;
-  right: 60px;
-  background: rgba(0, 0, 0, 0.8);
+  right: 5rem;
+  background: rgba(255, 255, 255, 0.04);
   color: white;
   padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  border-radius: 0; /* remove rounded corners */
+  font-size: 0.9rem;
   font-weight: 500;
   white-space: nowrap;
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* subtle border */
   animation: slideInFromRight 200ms ease-out;
 }
 
 @keyframes slideInFromRight {
   from { opacity: 0; transform: translateX(8px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInFromRight {
+  from { opacity: 0; transform: translateX(24px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
