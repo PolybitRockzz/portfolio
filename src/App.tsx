@@ -226,9 +226,8 @@ function AboutSection({ audioRef, isPlaying, setIsPlaying }: {
         </div>
         <p className="subtitle">KIIT University, Class of 2028<br/>
                                 B.Tech, Computer Science and Engineering</p>
-
-        {/* Flags to toggle addresses */}
         <FlagsAndAddresses />
+        <p className="subtitle">Interested in <a>Data Science</a>, <a>Machine Learning</a></p>
       </div>
     </section>
   )
