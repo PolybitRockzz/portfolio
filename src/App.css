@@ -129,6 +129,15 @@
   animation: fadeInContent 600ms ease 1250ms forwards;
 }
 
+.content .subtitle a {
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.content .subtitle a:hover {
+  text-decoration: underline;
+}
+
 /* Flags and addresses */
 .flags-block {
   margin-top: 1.2rem;
